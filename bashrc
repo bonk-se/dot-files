@@ -67,7 +67,7 @@ alias l='ls -la --color=auto'
 if [ "$color_prompt" = yes ]; then
 
     # Blue for own comp
-    if [[ $symhost =~ ^mikens-macbook(\.[a-z]+)?$ ]] || [[ $symhost =~ office\.spotify\.net$ ]]; then
+    if [[ ${symhost:0:14} = "mikens-macbook" ]]; then
         color="6"
         export CLICOLOR=1
         export LSCOLORS=ExGxcxdxCxegedabagacad
