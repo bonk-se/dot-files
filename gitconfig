@@ -1,0 +1,20 @@
+[user]
+	email = miken@bonk.se
+	name = bonk-se
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	autocrlf = input
+	safecrlf = true
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[branch]
+	autosetuprebase = always
+[push]
+	default = tracking
+[alias]
+	lg = log --graph --topo-order --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cred<%an>%Creset'
