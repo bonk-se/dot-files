@@ -78,7 +78,7 @@ if [ "$color_prompt" = yes ]; then
         color="5"
 
     # Green for dev
-    elif [[ $symhost =~ ^dev\.[-a-zA-Z0-9]+\.d$ ]]; then
+    elif [[ $symhost =~ ^dev\.[-a-zA-Z0-9]+\.d$ ]] || [[ $symhost =~ ^play\.miken(\.[a-z]+)?$ ]]; then
         color="2"
     
     # Yellow for testing and unstable
