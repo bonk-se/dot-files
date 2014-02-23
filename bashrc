@@ -17,7 +17,7 @@ export LC_ALL="en_US.UTF-8"
 # ... or force ignoredups and ignorespace
 export HISTSIZE=16384;
 export HISTFILESIZE=40960;
-export HISTCONTROL=ignoredups;
+export HISTCONTROL=ignoreboth:erasedups;
 export HISTTIMEFORMAT="%Y%m%d %H:%M:%S "
 export PROMPT_COMMAND="history -a"
 
