@@ -119,7 +119,7 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
