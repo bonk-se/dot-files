@@ -1,0 +1,24 @@
+// Location: ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
+{
+	"close_windows_when_empty": true,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"default_encoding": "UTF-8",
+	"default_line_ending": "unix",
+	"detect_slow_plugins": false,
+	"ensure_newline_at_eof_on_save": true,
+	"fallback_encoding": "UTF-8",
+	"font_size": 14.0,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"open_files_in_new_window": false,
+	"soda_classic_tabs": false,
+	"soda_folder_icons": true,
+	"sublimelinter_popup_errors_on_save": false,
+	"theme": "Soda Dark 3.sublime-theme",
+	"translate_spaces_to_tabs": true,
+	"translate_tabs_to_spaces": false,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
+}
