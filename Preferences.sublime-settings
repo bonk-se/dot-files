@@ -1,4 +1,7 @@
 // Location: ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
+// Install Soda:
+//    cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+//    git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
 {
 	"close_windows_when_empty": true,
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
@@ -16,7 +19,7 @@
 	"soda_classic_tabs": false,
 	"soda_folder_icons": true,
 	"sublimelinter_popup_errors_on_save": false,
-	"theme": "Soda Dark 3.sublime-theme",
+	"theme": "Soda Dark.sublime-theme",
 	"translate_spaces_to_tabs": true,
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true,
