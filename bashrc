@@ -74,13 +74,13 @@ if [ "$color_prompt" = yes ]; then
         alias l='ls -lAF'
 
     # My server
-    elif [ "$symhost" = "arielle" ]; then
+    elif [ "$symhost" = "kisskorven" ]; then
         color="5"
 
     # Green for dev
-    elif [[ $symhost =~ ^dev\.[-a-zA-Z0-9]+\.d$ ]] || [[ $symhost =~ ^play\.miken(\.[a-z]+)?$ ]]; then
+    elif [[ $symhost = "lifesum-dev" ]] || [[ $symhost =~ ^dev\.[-a-zA-Z0-9]+\.d$ ]] || [[ $symhost =~ ^play\.miken(\.[a-z]+)?$ ]]; then
         color="2"
-    
+
     # Yellow for testing and unstable
     elif [[ $symhost =~ www-[0-9]+\.testing\.d$ ]]; then
         color="3"
