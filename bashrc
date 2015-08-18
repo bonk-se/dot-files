@@ -67,7 +67,7 @@ alias l='ls -la --color=auto'
 if [ "$color_prompt" = yes ]; then
 
     # Blue for own comp
-    if [[ ${symhost:0:14} = "mikens-macbook" ]]; then
+    if [[ ${symhost:0:14} = "mikens-macbook" ]] || [[ ${symhost:0:2} = "K2" ]]; then
         color="6"
         export CLICOLOR=1
         export LSCOLORS=ExGxcxdxCxegedabagacad
