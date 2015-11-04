@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Create symlinks to home folder for dot-files and set hostname
+#
+DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+ln -s $DIR/bash_profile ~/.bash_profile
+ln -s $DIR/bashrc ~/.bashrc
+ln -s $DIR/gitignore ~/.gitignore
+ln -s $DIR/gitconfig ~/.gitconfig
+ln -s $DIR/ssh-config ~/.ssh/config
+
+sudo scutil --set HostName mikens-macbook
