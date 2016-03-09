@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Login as ubuntu
-su - ubuntu
-
 # Setup the ubuntu user with my custom dot-files
 cd /home/ubuntu
 sudo apt-get install git
