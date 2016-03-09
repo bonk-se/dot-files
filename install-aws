@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Login as ubuntu
+su - ubuntu
+
+# Setup the ubuntu user with my custom dot-files
+cd /home/ubuntu
+sudo apt-get install git
+mkdir /home/ubuntu/src
+cd /home/ubuntu/src
+git clone https://github.com/bonk-se/dot-files.git
+cd /home/ubuntu/src/dot-files
+mv ~/.bashrc ~/.bashrc-ORG
+./install
+
+# Check out GT project and install all deps
+sudo mkdir /www
+cd /www
+git clone https://bonk-se:80bde61e4731aeecab1d54cec925f7f7aa6d8893@github.com:bonk-se/globaltalent.git
+cd /www/globaltalent/setup
+
+# Run the install script
+sudo ./install-server
