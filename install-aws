@@ -14,7 +14,7 @@ mv ~/.bashrc ~/.bashrc-ORG
 sudo mkdir /www
 sudo chown ubuntu /www
 cd /www
-git clone https://bonk-se:80bde61e4731aeecab1d54cec925f7f7aa6d8893@github.com/bonk-se/globaltalent.git
+git clone https://github.com/bonk-se/globaltalent.git
 cd /www/globaltalent/setup
 
 # Run the install script
