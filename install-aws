@@ -1,8 +1,13 @@
 #!/bin/bash
 
+#
+# Just include this in "user data" when launching a EC2 instance
+# curl -sSL https://raw.githubusercontent.com/bonk-se/dot-files/master/install-aws | bash
+#
+
 # Setup the ubuntu user with my custom dot-files
 cd /home/ubuntu
-sudo apt-get install git
+sudo apt-get install -y git
 mkdir /home/ubuntu/src
 cd /home/ubuntu/src
 git clone https://github.com/bonk-se/dot-files.git
