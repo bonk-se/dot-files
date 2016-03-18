@@ -12,7 +12,6 @@ mkdir /home/ubuntu/src
 cd /home/ubuntu/src
 git clone https://github.com/bonk-se/dot-files.git
 cd /home/ubuntu/src/dot-files
-mv ~/.bashrc ~/.bashrc-ORG
 ./install
 
 # Create /www directory with correct owner

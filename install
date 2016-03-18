@@ -4,6 +4,7 @@
 #
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+mv ~/.bashrc ~/.bashrc-ORG
 ln -s $DIR/bashrc ~/.bashrc
 ln -s $DIR/gitignore ~/.gitignore
 ln -s $DIR/gitconfig ~/.gitconfig
