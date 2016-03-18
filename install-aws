@@ -30,6 +30,6 @@ sudo chown -R www-data:www-data /www
 cd /www
 
 # Clone GT and setup server
-git clone https://github.com/bonk-se/globaltalent.git
+git clone git@github.com:bonk-se/globaltalent.git
 cd /www/globaltalent/setup
 sudo ./install-server
