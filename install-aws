@@ -2,7 +2,7 @@
 
 #
 # Just include this in "user data" when launching a EC2 instance
-# curl -sSL https://raw.githubusercontent.com/bonk-se/dot-files/master/install-aws | bash
+# curl -sSL https://raw.githubusercontent.com/bonk-se/dot-files/master/install-aws | sh
 #
 
 # Setup the ubuntu user with my custom dot-files
