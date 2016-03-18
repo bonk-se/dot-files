@@ -7,12 +7,22 @@
 
 # Setup the ubuntu user with my custom dot-files
 cd /home/ubuntu
-sudo apt-get install -y git
+sudo apt-get install -y git awscli
 mkdir /home/ubuntu/src
 cd /home/ubuntu/src
 git clone https://github.com/bonk-se/dot-files.git
 cd /home/ubuntu/src/dot-files
 ./install
+
+# Deploy keys
+cd /home/ubuntu/.ssh
+# Fetch keys from S3
+aws s3 cp --region eu-west-1 s3://globaltalent/id_rsa .
+aws s3 cp --region eu-west-1 s3://globaltalent/id_rsa.pub .
+chmod 0600 id_rsa
+ssh-agent -s
+ssh-add id_rsa
+ssh -o StrictHostKeyChecking=no git@github.com
 
 # Create /www directory with correct owner
 sudo mkdir /www
@@ -20,7 +30,6 @@ sudo chown -R www-data:www-data /www
 cd /www
 
 # Clone GT and setup server
-# XXX - Not working due to private repo
-#git clone https://github.com/bonk-se/globaltalent.git
-#cd /www/globaltalent/setup
-#sudo ./install-server
+git clone https://github.com/bonk-se/globaltalent.git
+cd /www/globaltalent/setup
+sudo ./install-server
