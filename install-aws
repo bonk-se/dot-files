@@ -15,12 +15,13 @@ cd /home/ubuntu/src/dot-files
 mv ~/.bashrc ~/.bashrc-ORG
 ./install
 
-# Check out GT project and install all deps
+# Create /www directory with correct owner
 sudo mkdir /www
-sudo chown ubuntu /www
+sudo chown -R www-data:www-data /www
 cd /www
-git clone https://github.com/bonk-se/globaltalent.git
-cd /www/globaltalent/setup
 
-# Run the install script
-sudo ./install-server
+# Clone GT and setup server
+# XXX - Not working due to private repo
+#git clone https://github.com/bonk-se/globaltalent.git
+#cd /www/globaltalent/setup
+#sudo ./install-server
