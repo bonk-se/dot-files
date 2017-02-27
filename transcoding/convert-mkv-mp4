@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# Just convert container from MKV to MP4
+# Optimized for Plex
+#
+# Usage: convert-mkv-vcopy infile outfile
+#
+if [ $# -ne 2 ]; then
+    echo $0: usage: $0 infile outfile
+    exit 1
+fi
+
+ffmpeg -i $1 -map 0 -c:a copy -scodec mov_text -c:v copy $2
