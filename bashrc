@@ -5,6 +5,9 @@
 
 export EDITOR=nano
 
+# Add PHP 7.1 instead of built in 5.6
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -72,6 +75,8 @@ if [ "$color_prompt" = yes ]; then
         export CLICOLOR=1
         export LSCOLORS=ExGxcxdxCxegedabagacad
         alias l='ls -lAF'
+        # Add gettext-binaries to path on Mac
+        export PATH="/usr/local/opt/gettext/bin:$PATH"
 
     # My server
     elif [ "$symhost" = "kisskorven" ]; then
@@ -122,7 +127,7 @@ fi
 alias lr='ls -ltr'
 alias rm='rm -i'
 alias ssh='ssh -A'
-alias cp='cp -i'
+alias cp='cp -ip'
 alias mv='mv -i'
 alias sl='cowsay "slow down boi!";sleep 2'
 # enable programmable completion features (if not enabled)
