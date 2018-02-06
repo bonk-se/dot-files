@@ -5,9 +5,6 @@
 
 export EDITOR=nano
 
-# Add PHP 7.1 instead of built in 5.6
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -130,7 +127,24 @@ alias ssh='ssh -A'
 alias cp='cp -ip'
 alias mv='mv -i'
 alias sl='cowsay "slow down boi!";sleep 2'
+
 # enable programmable completion features (if not enabled)
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+fi
+
+##
+# Homebrew
+##
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+# Add PHP 7.2 instead of built in 5.6
+export PATH="$(brew --prefix homebrew/php/php72)/bin:$PATH"
+
+
+##
+# Homebrew bash completion
+##
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    source $(brew --prefix)/etc/bash_completion
 fi
