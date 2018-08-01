@@ -133,18 +133,31 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# Check what OS we're running
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
 ##
 # Homebrew
+# Only enabled for Mac
 ##
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-# Add PHP 7.2 instead of built in 5.6
-export PATH="$(brew --prefix homebrew/php/php72)/bin:$PATH"
+if [ "$(machine)" == "Darwin" ]; then
 
+    export PATH="/usr/local/bin:$PATH"
+    export PATH="/usr/local/sbin:$PATH"
+    # Add PHP 7.2 instead of built in 5.6
+    export PATH="$(brew --prefix homebrew/php)/bin:$PATH"
 
-##
-# Homebrew bash completion
-##
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    source $(brew --prefix)/etc/bash_completion
+    # Homebrew bash completion
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        source $(brew --prefix)/etc/bash_completion
+    fi
+
 fi
+# End Homebrew
