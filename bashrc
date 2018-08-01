@@ -141,8 +141,8 @@ if [ "$(uname -s)" == "Darwin" ]; then
 
     export PATH="/usr/local/bin:$PATH"
     export PATH="/usr/local/sbin:$PATH"
-    # Add PHP 7.2 instead of built in 5.6
-    export PATH="$(brew --prefix homebrew/php)/bin:$PATH"
+    # Use latest version of PHP instead of built in 5.6
+    export PATH="$(brew --prefix php)/bin:$PATH"
 
     # Homebrew bash completion
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
