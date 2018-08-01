@@ -133,21 +133,11 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-# Check what OS we're running
-unameOut="$(uname -s)"
-case "${unameOut}" in
-    Linux*)     machine=Linux;;
-    Darwin*)    machine=Mac;;
-    CYGWIN*)    machine=Cygwin;;
-    MINGW*)     machine=MinGw;;
-    *)          machine="UNKNOWN:${unameOut}"
-esac
-
 ##
 # Homebrew
 # Only enabled for Mac
 ##
-if [ "$(machine)" == "Darwin" ]; then
+if [ "$(uname -s)" == "Darwin" ]; then
 
     export PATH="/usr/local/bin:$PATH"
     export PATH="/usr/local/sbin:$PATH"
