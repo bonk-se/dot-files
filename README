@@ -2,3 +2,5 @@ My common dot-files for use on OS X and Linux
 
 Just execute the install-script to place the dot-files in your home folder.
 To make OS X behave better, run osx-unfucker once.
+
+TODO: Review the osx-unfucker
