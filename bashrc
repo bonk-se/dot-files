@@ -151,3 +151,6 @@ if [ "$(uname -s)" == "Darwin" ]; then
 
 fi
 # End Homebrew
+
+# Include .bash_npmjs if exists
+if [ -f ~/.bash_npmjs ]; then . ~/.bash_npmjs; fi
