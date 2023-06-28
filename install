@@ -10,6 +10,8 @@ ln -s $DIR/ssh-config ~/.ssh/config
 
 if grep -Fxq "# Added by dot-files" ~/.profile
 then
+    echo ".profile already patched"
+else
 cat <<EOT >> ~/.profile
 # Added by dot-files
 if [ -n "$BASH_VERSION" ]; then
