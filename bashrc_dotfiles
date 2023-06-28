@@ -8,7 +8,7 @@ export LANGUAGE="en"
 export LC_CTYPE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-# ... or force ignoredups and ignorespace
+# Force ignoredups and ignorespace
 export HISTSIZE=16384;
 export HISTFILESIZE=40960;
 export HISTCONTROL=ignoreboth:erasedups;
@@ -79,3 +79,11 @@ if [ -f ~/.bash_npmjs ]; then . ~/.bash_npmjs; fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Local env var
+if [[ ${symhost:0:7} = "mikens-" ]]; then
+    export NUGET_CREDENTIALPROVIDER_MSAL_ENABLED=true
+    export NUGET_CREDENTIALPROVIDER_FORCE_CANSHOWDIALOG_TO=true
+fi

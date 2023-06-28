@@ -2,4 +2,4 @@ ServerAliveInterval 60
 ServerAliveCountMax 30
 
 Host *
-   ForwardAgent yes
+    ForwardAgent yes
