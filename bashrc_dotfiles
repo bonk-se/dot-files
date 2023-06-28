@@ -39,7 +39,7 @@ fi
 if [ "$color_prompt" = yes ]; then
 
     # Red if root
-    if [[ "$EUID" -e 0 ]]; then
+    if [ "$EUID" = 0 ]; then
         color="1"
     # Green for own comp
     elif [[ ${symhost:0:7} = "mikens-" ]]; then
