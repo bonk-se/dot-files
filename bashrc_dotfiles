@@ -76,6 +76,7 @@ alias ssh='ssh -A'
 alias cp='cp -ip'
 alias mv='mv -i'
 alias sl='cowsay "slow down boi!";sleep 2'
+alias ynpmauth='cd ~/src/DeviceUI/ && yarn npmauth && cd $OLDPWD'
 
 # Include .bash_npmjs if exists
 if [ -f ~/.bash_npmjs ]; then . ~/.bash_npmjs; fi
